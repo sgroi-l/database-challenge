@@ -1,0 +1,33 @@
+{
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "DB_FILE=db.sqlite nodemon src/index.js",
+    "seed": "DB_FILE=db.sqlite node src/database/seed.js",
+    "test": "DB_FILE=test.sqlite node -r ./src/database/seed.js --test",
+    "test:1": "DB_FILE=test.sqlite node -r ./src/database/seed.js test/one.test.js",
+    "test:2": "DB_FILE=test.sqlite node -r ./src/database/seed.js test/two.test.js",
+    "test:3": "DB_FILE=test.sqlite node -r ./src/database/seed.js test/three.test.js",
+    "test:4": "DB_FILE=test.sqlite node -r ./src/database/seed.js test/four.test.js",
+    "test:5": "DB_FILE=test.sqlite node -r ./src/database/seed.js test/five.test.js",
+    "test:6": "DB_FILE=test.sqlite node -r ./src/database/seed.js test/six.test.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^7.5.3",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.1",
+    "nodemon": "^2.0.19"
+  },
+  "volta": {
+    "node": "18.16.0"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "commonjs": true,
+      "es2021": true,
+      "node": true
+    }
+  }
+}
